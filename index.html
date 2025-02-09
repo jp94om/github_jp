@@ -6,6 +6,14 @@
   <meta name="description" content="Tablero de control interactivo sobre la Encuesta de Salarios 2021 de 'Ask a Manager'.">
   <title>Dashboard Analytics</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    iframe {
+      max-height: 600px;
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body class="container mt-4">
 
@@ -16,13 +24,13 @@
   </p>
 
   <!-- DASHBOARD EMBEBIDO -->
-  <div class="text-center mb-4">
+  <div class="clearfix text-center mb-4">
     <iframe 
       width="100%" 
       height="600" 
       src="https://lookerstudio.google.com/embed/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6/page/dw8kE" 
       frameborder="0" 
-      style="border:0"
+      style="border:0; display:block; margin:auto;"
       loading="lazy"
       allowfullscreen
       sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
@@ -94,60 +102,4 @@
         <td>Agrupa variantes del nombre de ciudades bajo una denominación única.</td>
       </tr>
       <tr>
-        <td><strong>Salario Anual</strong></td>
-        <td>Numérica (entero)</td>
-        <td>Convertido a pesos colombianos con TRM de 5 de febrero de 2025.</td>
-      </tr>
-      <tr>
-        <td><strong>Compensaciones</strong></td>
-        <td>Numérica (entero)</td>
-        <td>Conversión de compensaciones a pesos colombianos.</td>
-      </tr>
-      <tr>
-        <td><strong>Total Salario Compensaciones</strong></td>
-        <td>Numérica (entero)</td>
-        <td>Suma del salario y compensaciones en pesos colombianos.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4>3. Guía para actualizar los datos y aplicar el modelado</h4>
-  <p>
-    <strong>Objetivo:</strong> Explicar, paso a paso, cómo actualizar los datos en el Tablero de Control.
-  </p>
-  <ol>
-    <li>
-      <strong>Cargar datos nuevos:</strong>  
-      Los datos se alojan en una hoja pública de Google Sheets:  
-      <a href="https://docs.google.com/spreadsheets/d/1IPS5dBSGtwYVbjsfbaMCYIWnOuRmJcbequohNxCyGVw/edit#gid=1625408792">Google Sheets - Encuesta de Salarios</a>.
-    </li>
-    <li>
-      <strong>Limpiar campos:</strong>  
-      Utilizar expresiones regulares para estandarizar nombres de países y ciudades:
-      <code>REGEXP_CONTAINS(TRIM(LOWER(...))).</code>
-    </li>
-    <li>
-      <strong>Convertir valores a Pesos Colombianos:</strong>  
-      Aplicar la TRM de 5 de febrero de 2025: 1 USD = 4,153.54 COP.
-    </li>
-    <li>
-      <strong>Crear variables adicionales:</strong>  
-      Generar la variable "Total Salario Compensaciones" sumando los valores en pesos colombianos.
-    </li>
-  </ol>
-
-  <p class="text-muted">
-    <strong>Enlace al tablero de control:</strong>  
-    <a href="https://lookerstudio.google.com/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6" target="_blank">Ver Dashboard</a>
-  </p>
-
-  <hr/>
-
-  <!-- Pie de página -->
-  <footer class="text-center mt-5 p-3 bg-light">
-    <p><strong>Creado por:</strong> Juan Pablo Ordoñez Martinez</p>
-    <p><strong>Código:</strong> 202423809</p>
-  </footer>
-
-</body>
-</html>
+        <td><strong>Salario Anual</strong></td
