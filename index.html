@@ -1,63 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Analytics</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Analytics</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
 </head>
 <body class="container mt-4">
 
-    <h1 class="text-center">Tablero de Control</h1>
-    <p class="text-center">A continuación, puedes visualizar el tablero de Control de Encuesta de salarios de 'Pregúntale a un Gerente' 2021:</p>
+  <!-- TÍTULO PRINCIPAL -->
+  <h1 class="text-center">Tablero de Control - Ask A Manager Salary Survey 2021</h1>
+  <p class="text-center">
+    A continuación, puedes visualizar el tablero de Control de Encuesta de salarios
+    de 'Pregúntale a un Gerente' 2021:
+  </p>
 
-    <!-- Inserta el Dashboard -->
-    <div class="text-center">
-        <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6/page/dw8kE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-    </div>
+  <!-- DASHBOARD EMBEBIDO -->
+  <div class="text-center mb-4">
+    <iframe
+      width="100%"
+      height="600"
+      src="https://lookerstudio.google.com/embed/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6/page/dw8kE"
+      frameborder="0"
+      style="border:0"
+      allowfullscreen
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+    ></iframe>
+  </div>
 
-    <hr>
+  <hr/>
 
-    <h2>📌 Documentación Tablero de Control - Ask A Manager Salary Survey 2021</h2>
+  <!-- DOCUMENTACIÓN COMPLETA -->
+  <h2>Documentación Tablero de Control</h2>
+  <h3>Ask A Manager Salary Survey 2021</h3>
 
-    <h3>1️⃣ Variables en la Base de Datos Original</h3>
+  <h4>1. Variables en base de datos original</h4>
+  <p>A continuación, se describen las variables tal como vienen en la base de datos original:</p>
+
+  <ul>
+    <li>
+      <strong>How old are you?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Indica el rango de edad.
+    </li>
+    <li>
+      <strong>What industry do you work in?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Industria en la que trabaja.
+    </li>
+    <li>
+      <strong>Job title</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Cargo o puesto de trabajo.
+    </li>
+    <li>
+      <strong>If your job title needs additional context, please clarify here:</strong><br />
+      (a) Tipo de variable: Texto.<br />
+      (b) Descripción de variable: Información adicional sobre el cargo en caso de que se requiera mayor contexto.
+    </li>
+    <li>
+      <strong>What is your annual salary?</strong><br />
+      (a) Tipo de variable: Numérica (entero).<br />
+      (b) Descripción de variable: Salario anual expresado en números enteros (valor en dólares).
+    </li>
+    <li>
+      <strong>How much additional monetary compensation do you get, if any?</strong><br />
+      (a) Tipo de variable: Numérica (entero).<br />
+      (b) Descripción de variable: Compensación monetaria adicional recibida, como bonificaciones o pago de horas extras en un año promedio, valor en dólares.
+    </li>
+    <li>
+      <strong>Please indicate the currency</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Moneda en la que se expresa el salario y la compensación adicional.
+    </li>
+    <li>
+      <strong>If "Other," please indicate the currency here:</strong><br />
+      (a) Tipo de variable: Texto.<br />
+      (b) Descripción de variable: Indicación de otra moneda si no está en la lista principal.
+    </li>
+    <li>
+      <strong>If your income needs additional context, please provide it here:</strong><br />
+      (a) Tipo de variable: Texto.<br />
+      (b) Descripción de variable: Explicación adicional sobre los ingresos, como beneficios adicionales o condiciones laborales.
+    </li>
+    <li>
+      <strong>What country do you work in?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: País donde trabaja.
+    </li>
+    <li>
+      <strong>If you're in the U.S., what state do you work in?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Estado de Estados Unidos donde trabaja.
+    </li>
+    <li>
+      <strong>What city do you work in?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Ciudad donde trabaja.
+    </li>
+    <li>
+      <strong>How many years of professional work experience do you have overall?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Años de experiencia profesional total, en cualquier área laboral.
+    </li>
+    <li>
+      <strong>How many years of professional work experience do you have in your field?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Años de experiencia en el campo específico de trabajo.
+    </li>
+    <li>
+      <strong>What is your highest level of education completed?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Nivel educativo más alto alcanzado.
+    </li>
+    <li>
+      <strong>What is your gender?</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Género con el que se identifica.
+    </li>
+    <li>
+      <strong>What is your race? (Choose all that apply.)</strong><br />
+      (a) Tipo de variable: Texto (categórica).<br />
+      (b) Descripción de variable: Raza o etnia con la que se identifica.
+    </li>
+  </ul>
+
+  <h4>2. Variables luego de modeladas</h4>
+  <ul>
+    <li>
+      <strong>Pais</strong><br />
+      (a) Tipo de variable: Información Geográfica (Pais).<br />
+      (b) Descripción de variable: Se creó para estandarizar el nombre del país donde trabaja cada encuestado,
+      unificando diversas formas de escritura y eliminando errores tipográficos o variantes no consistentes.
+      Se aplicó una transformación basada en expresiones regulares
+      <code>REGEXP_CONTAINS(TRIM(LOWER(What country do you work in?)))</code> que permite identificar múltiples
+      variantes del mismo país, considerando errores de digitación, abreviaciones y diferentes formas de escritura.
+    </li>
+    <li>
+      <strong>Ciudad</strong><br />
+      (a) Tipo de variable: Información Geográfica (Ciudad).<br />
+      (b) Descripción de variable: La nueva variable clasifica la ciudad de trabajo de los encuestados en categorías
+      estandarizadas. Se aplica una transformación basada en expresiones regulares
+      <code>REGEXP_CONTAINS(TRIM(LOWER(What city do you work in?)))</code> para identificar nombres de ciudades
+      con diferentes variantes de escritura y agruparlas bajo una denominación única.
+    </li>
+    <li>
+      <strong>Salario Anual</strong><br />
+      (a) Tipo de variable: Numérica (entero).<br />
+      (b) Descripción de variable: La nueva variable convierte el salario anual de dólares a pesos colombianos
+      multiplicando el valor del campo <em>"What is your annual salary?"</em> por la Tasa Representativa del
+      Mercado (TRM) del 5 de febrero de 2025, establecida en 1 USD = 4,153.54 COP.
+    </li>
+    <li>
+      <strong>Compensaciones</strong><br />
+      (a) Tipo de variable: Numérica (entero).<br />
+      (b) Descripción de variable: La nueva variable convierte las compensaciones de dólares a pesos colombianos
+      multiplicando el valor del campo <em>"How much additional monetary compensation do you get"</em> por la
+      Tasa Representativa del Mercado (TRM) del 5 de febrero de 2025, establecida en
+      1 USD = 4,153.54 COP.
+    </li>
+    <li>
+      <strong>Total Salario Compensaciones</strong><br />
+      (a) Tipo de variable: Numérica (entero).<br />
+      (b) Descripción de variable: La nueva variable representa la suma del Salario Anual y las Compensaciones,
+      ambos previamente convertidos a pesos colombianos.
+    </li>
+  </ul>
+
+  <p>
+    Además, las siguientes variables utilizadas para los filtros solo fueron renombradas,
+    traduciendo sus nombres del inglés al español:
+  </p>
+  <ul>
+    <li><em>How old are you?</em> → <strong>Edad</strong></li>
+    <li><em>What industry do you work in?</em> → <strong>Industria</strong></li>
+    <li><em>Job title</em> → <strong>Cargo</strong></li>
+    <li><em>How many years of professional work experience do you have overall?</em> → <strong>Experiencia</strong></li>
+    <li><em>What is your highest level of education completed?</em> → <strong>Nivel educativo</strong></li>
+    <li><em>What is your gender?</em> → <strong>Género</strong></li>
+    <li><em>What is your race? (Choose all that apply.)</em> → <strong>Raza</strong></li>
+  </ul>
+
+  <h4>3. Guía para actualizar los datos y aplicar el modelado</h4>
+  <p>
+    <strong>Objetivo:</strong> Explicar, paso a paso, el procedimiento necesario para actualizar los datos
+    y replicar el modelado para el Tablero de Control de la Encuesta de Salarios de 'Pregúntale a un Gerente' 2021.
+  </p>
+  <ul>
+    <li><strong>Enlace:</strong> Acceso al tablero de control en Looker Studio (ver más abajo)</li>
+    <li><strong>Público objetivo:</strong> Personas que, en el futuro, asuman la responsabilidad del proyecto.</li>
+    <li><strong>Aspectos a considerar:</strong></li>
     <ul>
-        <li><strong>How old are you?</strong> (Texto - Categórica) → Indica el rango de edad.</li>
-        <li><strong>What industry do you work in?</strong> (Texto - Categórica) → Industria en la que trabaja.</li>
-        <li><strong>Job title</strong> (Texto - Categórica) → Cargo o puesto de trabajo.</li>
-        <li><strong>What is your annual salary?</strong> (Numérica - Entero) → Salario anual en dólares.</li>
-        <li><strong>How much additional monetary compensation do you get?</strong> (Numérica - Entero) → Compensación monetaria adicional en dólares.</li>
-        <li><strong>What country do you work in?</strong> (Texto - Categórica) → País donde trabaja.</li>
-        <li><strong>How many years of professional work experience do you have overall?</strong> (Texto - Categórica) → Años de experiencia laboral.</li>
-        <li><strong>What is your highest level of education completed?</strong> (Texto - Categórica) → Nivel educativo alcanzado.</li>
-        <li><strong>What is your gender?</strong> (Texto - Categórica) → Género con el que se identifica.</li>
+      <li>Cómo importar los datos nuevos.</li>
+      <li>Cómo limpiar los datos.</li>
+      <li>Cómo crear nuevas variables modeladas.</li>
     </ul>
+  </ul>
 
-    <h3>2️⃣ Variables Modeladas</h3>
-    <ul>
-        <li><strong>País</strong> (Información Geográfica) → Estándar de escritura del país.</li>
-        <li><strong>Ciudad</strong> (Información Geográfica) → Estándar de escritura de la ciudad.</li>
-        <li><strong>Salario Anual</strong> (Numérica - Entero) → Conversión de salario a COP (TRM: 1 USD = 4,153.54 COP).</li>
-        <li><strong>Compensaciones</strong> (Numérica - Entero) → Conversión de compensaciones a COP.</li>
-        <li><strong>Total Salario + Compensaciones</strong> (Numérica - Entero) → Suma de salario y compensaciones en COP.</li>
-    </ul>
+  <h5>Paso a paso para actualizar los datos</h5>
+  <ol>
+    <li>
+      <strong>Cargar datos nuevos:</strong><br />
+      Los datos se alojan en una hoja pública de Google Sheets que se actualiza constantemente:
+      <a href="https://docs.google.com/spreadsheets/d/1IPS5dBSGtwYVbjsfbaMCYIWnOuRmJcbequohNxCyGVw/edit#gid=1625408792">
+      Google Sheets - Encuesta de Salarios</a>.<br />
+      • La conexión con Looker Studio se realiza a través de Google Sheets.<br />
+      • Los datos se extraen desde la hoja denominada “Form Responses 1”.
+    </li>
+    <li>
+      <strong>Limpiar campos:</strong><br />
+      Los campos “Country” (país) y “City” (ciudad) deben ser estandarizados para unificar las distintas formas
+      de escritura de nombres de lugares.<br />
+      • En Looker Studio, se deben crear dos campos calculados para la transformación de datos.<br />
+      • Utilizar expresiones regulares para identificar y agrupar las variantes de escritura:
+      <code>REGEXP_CONTAINS(TRIM(LOWER(…))).</code><br />
+      Esto permitirá homogenizar los nombres de ciudades y países bajo una denominación única.
+    </li>
+    <li>
+      <strong>Convertir valores a Pesos Colombianos:</strong><br />
+      Crear dos campos nuevos en el modelo de datos:<br />
+      • “Salario Anual”<br />
+      • “Compensaciones”<br />
+      Convertir los sueldos y compensaciones a Pesos Colombianos utilizando la
+      Tasa Representativa del Mercado (TRM) del 5 de febrero de 2025,
+      que establece la equivalencia: 1 USD = 4,153.54 COP.
+    </li>
+    <li>
+      <strong>Crear variables adicionales:</strong><br />
+      Crear un campo calculado adicional que sume el salario anual y las compensaciones en pesos colombianos.
+    </li>
+  </ol>
 
-    <h3>3️⃣ Guía para Actualizar los Datos y Aplicar el Modelado</h3>
-    <ul>
-        <li><strong>Objetivo:</strong> Explicar el procedimiento para actualizar el tablero de control.</li>
-        <li><strong>Fuente de datos:</strong> <a href="https://docs.google.com/spreadsheets/d/1IPS5dBSGtwYVbjsfbaMCYIWnOuRmJcbequohNxCyGVw/edit?resourcekey=&gid=1625408792#gid=1625408792">Google Sheets - Encuesta de Salarios</a>.</li>
-        <li><strong>Público objetivo:</strong> Personas encargadas del mantenimiento del dashboard.</li>
-    </ul>
-
-    <h4>📌 Paso a paso</h4>
-    <ol>
-        <li><strong>Cargar datos nuevos:</strong> Se importan desde Google Sheets en Looker Studio.</li>
-        <li><strong>Limpiar campos:</strong> Se usan expresiones regulares para estandarizar país y ciudad.</li>
-        <li><strong>Convertir valores:</strong> Se multiplican los montos por la TRM para obtener valores en COP.</li>
-        <li><strong>Crear variables adicionales:</strong> Se suma salario + compensaciones para obtener el total.</li>
-    </ol>
-
-    <p class="text-muted">🔗 Enlace al tablero de control en Looker Studio: <a href="TU_ENLACE_LOOKER_STUDIO">Ver Dashboard</a></p>
+  <p class="text-muted">
+    <strong>Enlace al tablero de control en Looker Studio: </strong>
+    <a
+      href="https://lookerstudio.google.com/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6"
+      target="_blank"
+      >Ver Dashboard</a
+    >
+  </p>
 
 </body>
 </html>
