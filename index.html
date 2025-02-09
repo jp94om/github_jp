@@ -1,2 +1,63 @@
-<h1>Tablero de Control
-Encuesta de salarios de 'Pregúntale a un Gerente' 2021 </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h1 class="text-center">Tablero de Control</h1>
+    <p class="text-center">A continuación, puedes visualizar el tablero de Control de Encuesta de salarios de 'Pregúntale a un Gerente' 2021:</p>
+
+    <!-- Inserta el Dashboard -->
+    <div class="text-center">
+        <iframe class="w-100" height="600px" src="https://lookerstudio.google.com/reporting/78d9849b-1c2c-4a86-b614-3a43cb3497f6" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <hr>
+
+    <h2>📌 Documentación Tablero de Control - Ask A Manager Salary Survey 2021</h2>
+
+    <h3>1️⃣ Variables en la Base de Datos Original</h3>
+    <ul>
+        <li><strong>How old are you?</strong> (Texto - Categórica) → Indica el rango de edad.</li>
+        <li><strong>What industry do you work in?</strong> (Texto - Categórica) → Industria en la que trabaja.</li>
+        <li><strong>Job title</strong> (Texto - Categórica) → Cargo o puesto de trabajo.</li>
+        <li><strong>What is your annual salary?</strong> (Numérica - Entero) → Salario anual en dólares.</li>
+        <li><strong>How much additional monetary compensation do you get?</strong> (Numérica - Entero) → Compensación monetaria adicional en dólares.</li>
+        <li><strong>What country do you work in?</strong> (Texto - Categórica) → País donde trabaja.</li>
+        <li><strong>How many years of professional work experience do you have overall?</strong> (Texto - Categórica) → Años de experiencia laboral.</li>
+        <li><strong>What is your highest level of education completed?</strong> (Texto - Categórica) → Nivel educativo alcanzado.</li>
+        <li><strong>What is your gender?</strong> (Texto - Categórica) → Género con el que se identifica.</li>
+    </ul>
+
+    <h3>2️⃣ Variables Modeladas</h3>
+    <ul>
+        <li><strong>País</strong> (Información Geográfica) → Estándar de escritura del país.</li>
+        <li><strong>Ciudad</strong> (Información Geográfica) → Estándar de escritura de la ciudad.</li>
+        <li><strong>Salario Anual</strong> (Numérica - Entero) → Conversión de salario a COP (TRM: 1 USD = 4,153.54 COP).</li>
+        <li><strong>Compensaciones</strong> (Numérica - Entero) → Conversión de compensaciones a COP.</li>
+        <li><strong>Total Salario + Compensaciones</strong> (Numérica - Entero) → Suma de salario y compensaciones en COP.</li>
+    </ul>
+
+    <h3>3️⃣ Guía para Actualizar los Datos y Aplicar el Modelado</h3>
+    <ul>
+        <li><strong>Objetivo:</strong> Explicar el procedimiento para actualizar el tablero de control.</li>
+        <li><strong>Fuente de datos:</strong> <a href="https://docs.google.com/spreadsheets/d/ENLACE_HOJA">Google Sheets - Encuesta de Salarios</a>.</li>
+        <li><strong>Público objetivo:</strong> Personas encargadas del mantenimiento del dashboard.</li>
+    </ul>
+
+    <h4>📌 Paso a paso</h4>
+    <ol>
+        <li><strong>Cargar datos nuevos:</strong> Se importan desde Google Sheets en Looker Studio.</li>
+        <li><strong>Limpiar campos:</strong> Se usan expresiones regulares para estandarizar país y ciudad.</li>
+        <li><strong>Convertir valores:</strong> Se multiplican los montos por la TRM para obtener valores en COP.</li>
+        <li><strong>Crear variables adicionales:</strong> Se suma salario + compensaciones para obtener el total.</li>
+    </ol>
+
+    <p class="text-muted">🔗 Enlace al tablero de control en Looker Studio: <a href="TU_ENLACE_LOOKER_STUDIO">Ver Dashboard</a></p>
+
+</body>
+</html>
